@@ -43,7 +43,7 @@ def youth_read(path):
     with open(path,'r') as f:
         # body_list = json.load(f)
         all_list = json.load(f)
-        body_list = random.sample(all_list,25)
+        body_list = random.shuffle(all_list)
         for i, body in enumerate(body_list):
             response = requests.post('https://kandian.youth.cn/v5/article/complete.json', headers=headers, data=body)
             r = response.json()
