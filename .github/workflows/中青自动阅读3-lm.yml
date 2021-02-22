@@ -1,8 +1,8 @@
-name: 中青看点自动阅读
+name: 中青看点自动阅读3
 
 on:
   schedule:
-    - cron: '*/30 * * * * '
+    - cron: '40 0-16/4 * * * '
   watch:
     types: [started]
 jobs:
