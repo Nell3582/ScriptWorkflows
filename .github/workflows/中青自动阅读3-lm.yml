@@ -21,7 +21,7 @@ jobs:
         run: pip install -r ./requirements.txt 
         
       - name: 'run 中青看点自动阅读' 
-        run: python3 zqautoread_xxm.py 
+        run: python3 zqautoread_lm.py 
         env:
             # XMLY_SPEED_COOKIE: ${{ secrets.XMLY_SPEED_COOKIE }}  #必须
             # XMLY_ACCUMULATE_TIME: ${{ secrets.XMLY_ACCUMULATE_TIME }} #非私密信息，去掉
