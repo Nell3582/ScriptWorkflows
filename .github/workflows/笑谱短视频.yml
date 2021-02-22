@@ -37,7 +37,7 @@ jobs:
           npm install
       - name: '运行 【笑谱短视频】'
         run: |
-          node iboxplay.js
+          node iboxpay.js
         env:
           VIDEOHEADER: ${{ secrets.VIDEOHEADER }}
           VIDEOBODY: ${{ secrets.VIDEOBODY }}
