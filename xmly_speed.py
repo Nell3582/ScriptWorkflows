@@ -33,28 +33,28 @@ TG_USER_ID = ''             # telegram 用户ID
 
 ###################################################
 # 对应方案1:  GitHub action自动运行,此处无需填写;
-if "XMLY_SPEED_COOKIE" in os.environ:
-    """
-    判断是否运行自GitHub action,"XMLY_SPEED_COOKIE" 该参数与 repo里的Secrets的名称保持一致
-    """
-    print("执行自GitHub action")
-    xmly_speed_cookie = os.environ["XMLY_SPEED_COOKIE"]
-    cookiesList = []  # 重置cookiesList
-    for line in xmly_speed_cookie.split('\n'):
-        if not line:
-            continue
-        cookiesList.append(line)
-    # GitHub action运行需要填写对应的secrets
-    if "BARK" in os.environ and os.environ["BARK"]:
-        BARK = os.environ["BARK"]
-        print("BARK 推送打开")
-    if "SCKEY" in os.environ and os.environ["SCKEY"]:
-        BARK = os.environ["SCKEY"]
-        print("serverJ 推送打开")
-    if "TG_BOT_TOKEN" in os.environ and os.environ["TG_BOT_TOKEN"] and "TG_USER_ID" in os.environ and os.environ["TG_USER_ID"]:
-        TG_BOT_TOKEN = os.environ["TG_BOT_TOKEN"]
-        TG_USER_ID = os.environ["TG_USER_ID"]
-        print("Telegram 推送打开")
+# if "XMLY_SPEED_COOKIE" in os.environ:
+#     """
+#     判断是否运行自GitHub action,"XMLY_SPEED_COOKIE" 该参数与 repo里的Secrets的名称保持一致
+#     """
+#     print("执行自GitHub action")
+#     xmly_speed_cookie = os.environ["XMLY_SPEED_COOKIE"]
+#     cookiesList = []  # 重置cookiesList
+#     for line in xmly_speed_cookie.split('\n'):
+#         if not line:
+#             continue
+#         cookiesList.append(line)
+#     # GitHub action运行需要填写对应的secrets
+#     if "BARK" in os.environ and os.environ["BARK"]:
+#         BARK = os.environ["BARK"]
+#         print("BARK 推送打开")
+#     if "SCKEY" in os.environ and os.environ["SCKEY"]:
+#         BARK = os.environ["SCKEY"]
+#         print("serverJ 推送打开")
+#     if "TG_BOT_TOKEN" in os.environ and os.environ["TG_BOT_TOKEN"] and "TG_USER_ID" in os.environ and os.environ["TG_USER_ID"]:
+#         TG_BOT_TOKEN = os.environ["TG_BOT_TOKEN"]
+#         TG_USER_ID = os.environ["TG_USER_ID"]
+#         print("Telegram 推送打开")
 
 
 ###################################################
