@@ -20,12 +20,12 @@ from urllib3.util import Retry
 # 通知服务
 BARK = ''                                                                 # bark服务,自行搜索; secrets可填;
 SCKEY = ''                                                                # Server酱的SCKEY; secrets可填
-TG_BOT_TOKEN = ''                                                         # tg机器人的TG_BOT_TOKEN; secrets可填
-TG_USER_ID = ''                                                           # tg机器人的TG_USER_ID; secrets可填
+TG_BOT_TOKEN = '1572513125:AAHDokotZU8dQquPPeg1BJH27oeap0hhDCw'                                                         # tg机器人的TG_BOT_TOKEN; secrets可填
+TG_USER_ID = '995328749'                                                           # tg机器人的TG_USER_ID; secrets可填
 TG_PROXY_IP = ''                                                          # tg机器人的TG_PROXY_IP; secrets可填
 TG_PROXY_PORT = ''                                                        # tg机器人的TG_PROXY_PORT; secrets可填
-DD_BOT_ACCESS_TOKEN = ''                                                  # 钉钉机器人的DD_BOT_ACCESS_TOKEN; secrets可填
-DD_BOT_SECRET = ''                                                        # 钉钉机器人的DD_BOT_SECRET; secrets可填
+DD_BOT_ACCESS_TOKEN = '9d35a417fd13301e046c31eb6deb29c47b769531a1e9d5e73b8a37d56dd1f2c1'                                                  # 钉钉机器人的DD_BOT_ACCESS_TOKEN; secrets可填
+DD_BOT_SECRET = 'SECbf540a5693061ed74b38299dbf8dfaa79e295d29bfbefea2117307884502e129'                                                        # 钉钉机器人的DD_BOT_SECRET; secrets可填
 QQ_SKEY = ''                                                              # qq机器人的QQ_SKEY; secrets可填
 QQ_MODE = ''                                                              # qq机器人的QQ_MODE; secrets可填
 
