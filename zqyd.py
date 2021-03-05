@@ -216,8 +216,8 @@ cookies7 = {
     "access=WIFI&androidid=13c9ac78d3f49cc8&app-version=2.8.8&app_name=zqkd_app&app_version=2.8.8&article_id=36584071&carrier=CMCC&channel=c4081&device_brand=HUAWEI&device_id=50759328&device_model=TAS-AN00&device_platform=android&device_type=android&dpi=240&fp=DuQipKRR8wtNQzYU8AIPYcOfpX2MWQl594q8P%2BJyNJiwhpzlpkT4Srm7vl%2B5ZHzSDkqDPQ7M9PToe9A56DI%2Fnz6Q&from=4&imei=863064168372912&inner_version=202102011723&language=zh-CN&memory=3&mi=0&mobile_type=1&net_type=1&network_type=WIFI&openudid=13c9ac78d3f49cc8&os_api=25&os_version=TAS-AN00-user%207.1.2%20TAS-AN00%20700210126%20release-keys&request_time=1614779161&resolution=720x1280&rom_version=TAS-AN00-user%207.1.2%20TAS-AN00%20700210126%20release-keys&sim=1&sm_device_id=20210228102005ffbc4a4674f7e3b22bddf8e3c422fb37014e413713a7c18e&storage=61.39&stype=wx&subv=1.2.2&szlm_ddid=DuQipKRR8wtNQzYU8AIPYcOfpX2MWQl594q8P%2BJyNJiwhpzlpkT4Srm7vl%2B5ZHzSDkqDPQ7M9PToe9A56DI%2Fnz6Q&token=21db1cdd31cbabc18329ff4a11d57c14&uid=54135722&version_code=56&zqkey=MDAwMDAwMDAwMJCMpN-w09Wtg5-Bb36eh6CPqHualIejl691qayxt5eyhKKp4LDPyGl9onqkj3ZqYJa8Y898najWsJupZLC3hWyFsoqZr7mmapqGcXY&zqkey_id=9c92ca22fffaf09e6becedc1b47ca8fc"
 }
 COOKIELIST = [cookies1, cookies2, cookies3,
-              cookies4, cookies5, cookies6, cookies7]  
-# COOKIELIST = [cookies7]
+              cookies4, cookies5, cookies7, cookies6]  
+# COOKIELIST = [cookies6]
 
 # ac读取环境变量
 if "YOUTH_HEADER1" in os.environ:
