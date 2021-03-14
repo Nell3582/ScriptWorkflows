@@ -67,7 +67,7 @@ client = TelegramClient("test", api_id, api_hash, proxy=("socks5", "127.0.0.1", 
 p1: Final = re.compile(r"[(](.*?)[)]", re.S)
 
 
-@client.on(events.NewMessage(incoming=True, chats="🍉&🐱&🥔", from_users="伊芙🐱"))
+@client.on(events.NewMessage(incoming=True, chats="🍉&🐱&🥔", from_users="直播间京豆📢"))
 async def my_event_handler(event):
     if "跳转直播间抽奖" in event.raw_text and "抽奖直达" in event.raw_text:
         logging.debug(event.message)
