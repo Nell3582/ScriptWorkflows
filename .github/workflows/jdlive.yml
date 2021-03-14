@@ -23,7 +23,7 @@ jobs:
              pip install telethon
              pip install httpx
              pip install typing
-             pip install socks
+             pip install pysocks
         
       - name: 'run 京东直播间' 
         run: python3 jd_live.py 
