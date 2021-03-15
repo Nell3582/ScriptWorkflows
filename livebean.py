@@ -9,6 +9,10 @@ import re
 import asyncio
 import os
 import requests
+import socket  
+import socks  
+socks.set_default_proxy(socks.SOCKS5, "127.0.0.1", 7890)  
+socket.socket = socks.socksocket 
 
 #账号cookie的格式替换xxx，1️⃣2️⃣3️⃣处的字符可以自行替换，前后的0不要动多账号自行增加额外的行
 cookies = [
@@ -86,7 +90,7 @@ def tgNotify(title, content):
     else:
         print('推送失败！')
 
-
+# client = TelegramClient("test", api_id, api_hash, proxy=("socks5", "127.0.0.1", "7890"))
 client = TelegramClient('test', api_id, api_hash)
 client.start()
 
