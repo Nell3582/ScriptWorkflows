@@ -1,0 +1,1 @@
+python -i G:\1.ScriptsWorkSpace\ScriptWorkflows\DataBased\简易信息管理系统.py
