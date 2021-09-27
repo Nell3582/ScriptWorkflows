@@ -63,11 +63,11 @@ def notify():
             # text = f'用户{k}\n类别{type}\n使用权限仅剩{nTime}天\n请提醒及时续费'
             QYWXNotify('授权失效提醒', f'用户{k}\n类别{type}\n使用权限仅剩{nTime}天\n请提醒及时续费')
 
-            qmsg = f'----------账户信息提醒----------\n\nDear Friends:\n您在本站订购的自助热水服务即将到期,如需继续使用本站服务,请在授权结束后及时申请下一阶段授权,您的账户详细使用信息如下:\n\n授权账号识别码: {k}\n截至使用日期:{deadline}\n可用时长还剩 {nTime} 天\n\n---------------------------\n本提醒由信息通知系统自动发送,仅在授权到期前三日触发,旨在提醒您的使用时长权限即将到期,如需继续使用,请注意及时申请下一阶段授权'
-            url = f"http://127.0.0.1:6666/send_private_msg?"
-            params = {'user_id': '779544383', 'message': qmsg}
-            res = requests.get(url, params).text
-            print(res)
+            # qmsg = f'----------账户信息提醒----------\n\nDear Friends:\n您在本站订购的自助热水服务即将到期,如需继续使用本站服务,请在授权结束后及时申请下一阶段授权,您的账户详细使用信息如下:\n\n授权账号识别码: {k}\n截至使用日期:{deadline}\n可用时长还剩 {nTime} 天\n\n---------------------------\n本提醒由信息通知系统自动发送,仅在授权到期前三日触发,旨在提醒您的使用时长权限即将到期,如需继续使用,请注意及时申请下一阶段授权'
+            # url = f"http://127.0.0.1:6666/send_private_msg?"
+            # params = {'user_id': '779544383', 'message': qmsg}
+            # res = requests.get(url, params).text
+            # print(res)
 
 
 if __name__ == "__main__":
