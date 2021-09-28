@@ -10,7 +10,7 @@ import nonebot.adapters.cqhttp
 import _thread
 
 
-group = {'1':907442227,'2':519036865,'3':519036865,'4':87629913,'5':908326662}
+group = {'1':833258227,'2':783384299,'3':519036865,'4':87629913,'5':908326662}
 # 获取所有用户信息
 def getAllData():
 
@@ -23,6 +23,25 @@ def getAllData():
     data = res.json()
     # print(data)
     return data
+
+def getOwnerID(qq):
+
+    headers = {
+        'accept': 'application/json',
+    }
+
+    res = requests.get(
+        'http://47.98.173.224:5700/users/?skip=0&limit=10000', headers=headers)
+    lst = res.json()
+    for dic in lst:
+        if dic['email'] == str(qq):
+            owner_id = dic['id']
+            break
+        else:
+            owner_id = 1
+    return owner_id
+
+
 
 def getDiff(date_str):
     now_time = time.localtime(time.time())
@@ -52,11 +71,8 @@ def isHasUser(tel):
 
 scheduler = require('nonebot_plugin_apscheduler').scheduler
  
-@scheduler.scheduled_job('cron', hour=10,minute=47)
+@scheduler.scheduled_job('cron', hour=10,minute=00)
 async def demo():
-    # # driver = get_driver()
-    # driver = nonebot.get_driver()
-    # # BOT_ID = str(driver.config.bot_id)
     bot = nonebot.get_bot()
     res = getAllData()
     pat = re.compile(r'(\d{3})(\d{4})(\d{4})')
@@ -66,8 +82,9 @@ async def demo():
         owner = str(dic['owner_id'])
         group_id = group[owner]
         nTime = getDiff(deadline)
+        start = '授权到期提醒'.center(26, '-')
         if -1 < nTime < 3:
-            qmsg = f'----------授权即将到期提醒----------\n\n用户{id},您好：\n您在本站订购的自助热水服务即将到期,如需继续使用,请及时申请下一阶段授权,您的账户详细使用信息如下:\n\n账号ID: {id}\n截至使用日期:{deadline}\n可用时长还剩 {nTime} 天\n\n---------------------------'
+            qmsg = f'{start}\n\n用户{id},您好：\n\n您在本站订购的自助热水服务即将到期,为不影响您的使用,请及时申请下一阶段授权,祝您用水愉快！\n\n您的账户详细使用信息如下:\n\n授权账号ID: {id}\n截至使用日期:{deadline}\n可用时长还剩 {nTime} 天\n\n{start}'
             await bot.send_group_msg(group_id=group_id, message=qmsg)
 
 
