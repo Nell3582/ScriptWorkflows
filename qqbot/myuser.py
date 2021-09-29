@@ -12,7 +12,7 @@ from nonebot.permission import SUPERUSER
 
 
 
-myuser = on_command("myuser", permission=SUPERUSER, priority=6)
+myuser = on_command("用户", permission=SUPERUSER, priority=6)
 
 
 def getOwnerID(qq):
@@ -120,7 +120,7 @@ async def handle_user_id(bot: Bot, event: Event, state: T_State):
             table = "\n".join(lst)
             await myuser.finish(table)
         elif choice == "2":
-            end = getNextMonthEndDay()
+            end = getFirstAndLastDay()[1]
             for dic in items_lst:
                 user_id = dic['title']
                 deadline = dic['description']
